@@ -2,14 +2,14 @@
 import thumbWar from '../thumb-war'
 import * as utils from '../utils'
 
-// add an inline mock with the jest.mock API
-//
-// jest.mock(
-//   relativePathToModuleToMock,
-//   functionThatReturnsMockObject
-// )
-//
-// (Hint #1)
+jest.mock(
+    '../utils',
+    () => {
+      return {
+        getWinner: jest.fn((p1, p2) => p2)
+      }
+    }
+)
 
 test('returns winner', () => {
   // remove the next two lines
@@ -22,9 +22,6 @@ test('returns winner', () => {
   utils.getWinner.mock.calls.forEach(args => {
     expect(args).toEqual(['Ken Wheeler', 'Kent C. Dodds'])
   })
-
-  // remove the next line
-  utils.getWinner.mockRestore()
 })
 
 /*
