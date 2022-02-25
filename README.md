@@ -3,11 +3,13 @@ This project is based on the course: https://frontendmasters.com/courses/testing
 Lessons learnt: 
 
 Every test should have the following flow (the AAA rule):
-Arrange: This is the first step of a unit test application. Here we will arrange the test, in other words we will do the necessary setup of the test. For example, to perform the test we need to create an object of the targeted class, if necessary, then we need to create mock objects and other variable initialization, something like this.
+- Arrange: This is the first step of a unit test application. Here we will arrange the test, in other words we will do the necessary setup of the test. For example, to perform the test we need to create an object of the targeted class, if necessary, then we need to create mock objects and other variable initialization, something like this.
 
-Act: This is the middle step of a unit step application. In this step we will execute the test. In other words we will do the actual unit testing and the result will be obtained from the test application. Basically we will call the targeted function in this step using the object that we created in the previous step.
 
-Assert: This is the last step of a unit test application. In this step we will check and verify the returned result with expected results
+- Act: This is the middle step of a unit step application. In this step we will execute the test. In other words we will do the actual unit testing and the result will be obtained from the test application. Basically we will call the targeted function in this step using the object that we created in the previous step.
+
+
+- Assert: This is the last step of a unit test application. In this step we will check and verify the returned result with expected results
 A test helps you to identify when there is a bug, and a good test helps you to find where the bug is.
 
 
@@ -15,10 +17,10 @@ Assertions documentation:
 https://jestjs.io/docs/expect
 
 The most popular assertions:
-toBe() it’s similar with ===
-There is also not.toBe(), similar with !==
-toEqual() similar with loadsh isEqual: https://lodash.com/docs/4.17.4#isEqual
-toMatchObject, similar to `toEqual`, but for partial equality (checking that a smaller object is equal with a part of the bigger object)
+- toBe() it’s similar with ===
+- There is also not.toBe(), similar with !==
+- toEqual() similar with loadsh isEqual: https://lodash.com/docs/4.17.4#isEqual
+- toMatchObject, similar to `toEqual`, but for partial equality (checking that a smaller object is equal with a part of the bigger object)
 
 
 100% code coverage doesn’t correlate with a high confidence in the code. We may have a big coverage but the tests are not good enough and they don’t cover important cases.
